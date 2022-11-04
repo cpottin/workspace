@@ -1,5 +1,6 @@
 class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello from IntelliJ");
+        //this is a comment to test the gitHub merge
+        System.out.println("Hello from Georgia");
     }
 }
