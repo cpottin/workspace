@@ -11,6 +11,10 @@ public class HourlyEmployee extends Employee{
         this.rate = rate;
         this.hours = hours;
     }
+@Override
+    public void pay(){
+        System.out.println(getName() + " is paid hourly " + (rate * hours));
+    }
 
     public double getRate() {
         return rate;

@@ -13,7 +13,7 @@ public class HikingTrails {
     public HikingTrails() {
     }
 
-    public HikingTrails(String trailName, double trailLengthMiles, boolean dogsAllowed,
+    public HikingTrails (String trailName, double trailLengthMiles, boolean dogsAllowed,
                         int elevationGain, RatingType ratingType) {
         this.trailName = trailName;
         this.trailLengthMiles = trailLengthMiles;
@@ -30,6 +30,10 @@ public class HikingTrails {
     public HikingTrails(String trailName, double trailLengthMiles) {
         this.trailName = trailName;
         this.trailLengthMiles = trailLengthMiles;
+    }
+
+    public HikingTrails(String trailName, double trailLengthMiles, boolean dogsAllowed,
+                        RatingType ratingType, RatingType ratingTypee1, int elevationGain) {
     }
 
     //business method
@@ -75,9 +79,9 @@ public class HikingTrails {
         return elevationGain;
     }
 
-    public void setElevationGain(int elevationGain) {
+    public void setElevationGain(int elevationGain) throws IllegalArgumentException{
         if (elevationGain > MAX_ELEVATION_GAIN) {
-            System.out.println("Invalid entry");
+            throw new IllegalArgumentException("Invalid entry");
         } else {
             this.elevationGain = elevationGain;
         }
